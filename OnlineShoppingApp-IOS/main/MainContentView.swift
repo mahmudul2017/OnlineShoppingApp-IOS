@@ -26,10 +26,10 @@ struct MainContentView: View {
                 }
                 .tag(2)
             
-            CartItemView()
+            ChartShapeView()
                 .tabItem {
-                    Image(systemName: "cart.badge.plus")
-                        Text("Cart")
+                    Image(systemName: "chart.bar")
+                        Text("Chart")
                 }
                 .tag(3)
             

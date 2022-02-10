@@ -16,6 +16,10 @@ class PostUserViewModel: ObservableObject {
     @Published var selectedItemList = [PostModel]()
     @Published var selectedAllPostList = [PostModel]()
     @Published var isSelectedListCheck = false
+    @Published var postsRandomNumbers: [Int] = []
+    @Published var selectRandomNumLists: [Int] = []
+    @Published var sumSelectRanNumLists: Int = 0
+    @Published var userIndexList: [Int] = []
     
     init() {
         getUserPostDetailsStatus()
@@ -38,6 +42,16 @@ class PostUserViewModel: ObservableObject {
         print("...... vm: \(userPostLists)")
     }
     
+    func getCommentRandomNumber() {
+        if userPostLists.count > 0 {
+            for _ in 0..<(self.userPostLists.count) {
+                let randomIntNumber = Int.random(in: 1...10)
+                self.postsRandomNumbers.append(randomIntNumber)
+            }
+        }
+        print("random number: \(self.postsRandomNumbers)")
+    }
+    
     // MARK: - UserListDetailsApiCall
     func getUserPostDetailsStatus() {
         self.userDetailsSubscriber = self.getUserPostDetailsPublisher()?.sink(receiveCompletion: { completion in
@@ -51,6 +65,9 @@ class PostUserViewModel: ObservableObject {
             if response.count > 0 {
                 self.userPostLists.removeAll()
                 self.userPostLists.append(contentsOf: response)
+                
+                // MARK: - RandomNumberCall
+                self.getCommentRandomNumber()
             }
             self.objectWillChange.send()
         })

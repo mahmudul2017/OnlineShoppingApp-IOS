@@ -16,6 +16,8 @@
 		E9B5B33927A6873000C2B3D5 /* PostUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5B33827A6873000C2B3D5 /* PostUserView.swift */; };
 		E9B5B33E27A68A3300C2B3D5 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5B33D27A68A3300C2B3D5 /* CommentViewModel.swift */; };
 		E9B5B34327A6921F00C2B3D5 /* PostUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5B34227A6921F00C2B3D5 /* PostUserViewModel.swift */; };
+		E9C28DE427B5497900DBE08E /* ChartShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C28DE327B5497900DBE08E /* ChartShapeModel.swift */; };
+		E9C28DE927B5499600DBE08E /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C28DE827B5499600DBE08E /* ChartViewModel.swift */; };
 		E9D0AE8227A265E400C4CAAA /* OnlineShoppingApp_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AE8127A265E400C4CAAA /* OnlineShoppingApp_IOSApp.swift */; };
 		E9D0AE8427A265E400C4CAAA /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AE8327A265E400C4CAAA /* DashBoardView.swift */; };
 		E9D0AE8627A265E400C4CAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D0AE8527A265E400C4CAAA /* Assets.xcassets */; };
@@ -24,7 +26,7 @@
 		E9D0AE9F27A265E500C4CAAA /* OnlineShoppingApp_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AE9E27A265E500C4CAAA /* OnlineShoppingApp_IOSUITests.swift */; };
 		E9D0AEBA27A272E200C4CAAA /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AEB927A272E200C4CAAA /* ContactView.swift */; };
 		E9D0AEC227A2732500C4CAAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AEC127A2732500C4CAAA /* ProfileView.swift */; };
-		E9D0AEC727A2735300C4CAAA /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AEC627A2735300C4CAAA /* CartItemView.swift */; };
+		E9D0AEC727A2735300C4CAAA /* ChartShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AEC627A2735300C4CAAA /* ChartShapeView.swift */; };
 		E9D0AECD27A2746C00C4CAAA /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AECC27A2746C00C4CAAA /* MainContentView.swift */; };
 		E9D0AED927A2896900C4CAAA /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AED827A2896900C4CAAA /* ColorList.swift */; };
 		E9D0AEE727A2B97800C4CAAA /* CheckBoxRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0AEE627A2B97800C4CAAA /* CheckBoxRow.swift */; };
@@ -61,6 +63,8 @@
 		E9B5B33827A6873000C2B3D5 /* PostUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUserView.swift; sourceTree = "<group>"; };
 		E9B5B33D27A68A3300C2B3D5 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		E9B5B34227A6921F00C2B3D5 /* PostUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUserViewModel.swift; sourceTree = "<group>"; };
+		E9C28DE327B5497900DBE08E /* ChartShapeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartShapeModel.swift; sourceTree = "<group>"; };
+		E9C28DE827B5499600DBE08E /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		E9D0AE7E27A265E400C4CAAA /* OnlineShoppingApp-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnlineShoppingApp-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D0AE8127A265E400C4CAAA /* OnlineShoppingApp_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShoppingApp_IOSApp.swift; sourceTree = "<group>"; };
 		E9D0AE8327A265E400C4CAAA /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		E9D0AEA027A265E500C4CAAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9D0AEB927A272E200C4CAAA /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		E9D0AEC127A2732500C4CAAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		E9D0AEC627A2735300C4CAAA /* CartItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
+		E9D0AEC627A2735300C4CAAA /* ChartShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartShapeView.swift; sourceTree = "<group>"; };
 		E9D0AECC27A2746C00C4CAAA /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		E9D0AED827A2896900C4CAAA /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		E9D0AEE627A2B97800C4CAAA /* CheckBoxRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxRow.swift; sourceTree = "<group>"; };
@@ -137,7 +141,7 @@
 				E9D0AED727A2892D00C4CAAA /* utility */,
 				E9D0AECB27A2742B00C4CAAA /* main */,
 				E9D0AEB827A2729400C4CAAA /* contact */,
-				E9D0AEB427A2720300C4CAAA /* cart */,
+				E9D0AEB427A2720300C4CAAA /* chart */,
 				E9D0AEB327A271DD00C4CAAA /* dashboard */,
 				E9D0AEB227A271C200C4CAAA /* profile */,
 				E9D0AE8127A265E400C4CAAA /* OnlineShoppingApp_IOSApp.swift */,
@@ -198,12 +202,14 @@
 			path = dashboard;
 			sourceTree = "<group>";
 		};
-		E9D0AEB427A2720300C4CAAA /* cart */ = {
+		E9D0AEB427A2720300C4CAAA /* chart */ = {
 			isa = PBXGroup;
 			children = (
-				E9D0AEC627A2735300C4CAAA /* CartItemView.swift */,
+				E9D0AEC627A2735300C4CAAA /* ChartShapeView.swift */,
+				E9C28DE327B5497900DBE08E /* ChartShapeModel.swift */,
+				E9C28DE827B5499600DBE08E /* ChartViewModel.swift */,
 			);
-			path = cart;
+			path = chart;
 			sourceTree = "<group>";
 		};
 		E9D0AEB827A2729400C4CAAA /* contact */ = {
@@ -380,6 +386,7 @@
 				E9B5B33E27A68A3300C2B3D5 /* CommentViewModel.swift in Sources */,
 				E94D1DEE27AA84CE00EA7CA6 /* SpinLoaderView.swift in Sources */,
 				E92D39EC27A7A25200AFDDCC /* SuccessToast.swift in Sources */,
+				E9C28DE927B5499600DBE08E /* ChartViewModel.swift in Sources */,
 				E92D39FE27A7A79600AFDDCC /* PostDetailsView.swift in Sources */,
 				E9D0AEF827A2C1A300C4CAAA /* DashBoardModel.swift in Sources */,
 				E9D0AED927A2896900C4CAAA /* ColorList.swift in Sources */,
@@ -390,7 +397,8 @@
 				E9D0AEBA27A272E200C4CAAA /* ContactView.swift in Sources */,
 				E9D0AEF327A2C05C00C4CAAA /* DashBoardViewModel.swift in Sources */,
 				E9D0AEEE27A2BFD200C4CAAA /* ApiService.swift in Sources */,
-				E9D0AEC727A2735300C4CAAA /* CartItemView.swift in Sources */,
+				E9C28DE427B5497900DBE08E /* ChartShapeModel.swift in Sources */,
+				E9D0AEC727A2735300C4CAAA /* ChartShapeView.swift in Sources */,
 				E9D0AE8227A265E400C4CAAA /* OnlineShoppingApp_IOSApp.swift in Sources */,
 				E9D0AECD27A2746C00C4CAAA /* MainContentView.swift in Sources */,
 			);

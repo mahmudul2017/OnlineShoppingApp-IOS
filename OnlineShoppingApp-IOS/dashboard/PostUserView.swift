@@ -17,9 +17,9 @@ struct PostUserView: View {
             VStack {
                 List {
                     ForEach(viewModel.userPostLists.indices, id: \.self) { userIndex in
-                        let _ = print("ListView.....\(userIndex)")
+                        //let _ = print("ListView.....\(userIndex)")
                         
-                        UserPostListRow(viewModel: self.viewModel, userPostLists: $viewModel.userPostLists[userIndex])
+                        UserPostListRow(viewModel: self.viewModel, userPostLists: $viewModel.userPostLists[userIndex], randomIntNumber: $viewModel.postsRandomNumbers[userIndex], userIndex: userIndex)
                             .listRowInsets(EdgeInsets())
                     }
                 }
@@ -57,6 +57,8 @@ struct UserPostListRow: View {
     @ObservedObject var viewModel: PostUserViewModel
     @Binding var userPostLists: PostModel
     @State var isListChecked: Bool = false
+    @Binding var randomIntNumber: Int
+    var userIndex: Int
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -70,9 +72,21 @@ struct UserPostListRow: View {
                         .frame(width: 40, height: 40)
                 })
                 .onTapGesture {
-                    viewModel.selectedItemList.append(userPostLists)
                     self.isListChecked.toggle()
-                    let _ = print("press at Tab \(viewModel.selectedItemList)")
+                    if self.isListChecked {
+                        //viewModel.userIndexList.append(userIndex)
+                        viewModel.selectedItemList.append(userPostLists)
+                        viewModel.selectedAllPostList.append(userPostLists)
+                        viewModel.selectRandomNumLists.append(randomIntNumber)
+                        let _ = print("isListChecked 1: \(self.isListChecked): \(viewModel.selectedAllPostList) : \(userIndex)")
+                    } else {
+                        if self.viewModel.selectedItemList.count > 0 {
+                            //viewModel.userIndexList.remove(at: userIndex)
+                            viewModel.selectedAllPostList.remove(at: userIndex)
+                            viewModel.selectRandomNumLists.remove(at: userIndex)
+                            let _ = print("isListChecked 2: \(self.isListChecked) : \(viewModel.selectedAllPostList) : \(userIndex)")
+                        }
+                    }
                 }
                 
                 VStack(alignment: .leading) {
@@ -82,6 +96,9 @@ struct UserPostListRow: View {
                         Text(String(userPostLists.id))
                             .foregroundColor(Colors.lightGray)
                             .bold()
+                        Text(String(randomIntNumber))
+                            .foregroundColor(Colors.color3)
+                            .font(.system(size: 14))
                     }
                     
                     Text("Title: \(userPostLists.title)")
@@ -105,7 +122,7 @@ struct UserSelectedPost: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: PostDetailsView(selectedPostList: viewModel.selectedItemList), isActive: $viewModel.isSelectedListCheck) {
+            NavigationLink(destination: PostDetailsView(selectedPostList: viewModel.selectedAllPostList, selectRandomNumLists: viewModel.selectRandomNumLists, sumSelectRanNumLists: viewModel.sumSelectRanNumLists), isActive: $viewModel.isSelectedListCheck) {
                 Text("")
             }
             Button(action: {
@@ -120,14 +137,20 @@ struct UserSelectedPost: View {
                     .frame(width: 48, height: 48, alignment: .bottomTrailing)
             })
             .onTapGesture {
-                
+            
             }
         }
+        .onDisappear(perform: {
+            //viewModel.selectedItemList.removeAll()
+            //viewModel.selectRandomNumLists.removeAll()
+        })
     }
     
     private func SelectedItemPressed() {
         if self.viewModel.selectedItemList.count > 0 {
             self.viewModel.isSelectedListCheck = true
+            // MARK: - ListOfPriceSum()
+            viewModel.sumSelectRanNumLists = viewModel.selectRandomNumLists.reduce(0, +)
         } else {
             self.isErrorShowing = true
         }

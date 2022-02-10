@@ -9,10 +9,16 @@ import SwiftUI
 
 struct PostDetailsView: View {
     @State var selectedPostList: [PostModel]
+    @State var selectRandomNumLists: [Int]
+    @State var sumSelectRanNumLists: Int
     
     var body: some View {
         ZStack {
             VStack {
+                let _ = print("selectRandomNumLists: \(selectRandomNumLists)")
+                Text("Grand Number: \(self.sumSelectRanNumLists > 0 ? self.sumSelectRanNumLists : 0)")
+                    .padding(.top, 8)
+                
                 List {
                     ForEach(self.selectedPostList.indices, id: \.self) { userIndex in
                         let _ = print("ListView.....\(userIndex)")
@@ -61,6 +67,6 @@ struct SelectedPostListRow: View {
 
 struct PostDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        PostDetailsView(selectedPostList: [PostModel]())
+        PostDetailsView(selectedPostList: [PostModel](), selectRandomNumLists: [Int](), sumSelectRanNumLists: 1)
     }
 }
