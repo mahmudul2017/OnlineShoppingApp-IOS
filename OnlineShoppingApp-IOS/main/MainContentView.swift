@@ -33,12 +33,19 @@ struct MainContentView: View {
                 }
                 .tag(3)
             
+            CartItemView()
+                .tabItem {
+                    Image(systemName: "cart")
+                    Text("Cart")
+                }
+                .tag(4)
+            
             ContactView()
                 .tabItem {
                     Image(systemName: "phone.circle")
                     Text("Contact")
                 }
-                .tag(4)
+                .tag(5)
         }
         // MARK: - SELECTED TAB COLOR CHANGED
         .accentColor(.green)

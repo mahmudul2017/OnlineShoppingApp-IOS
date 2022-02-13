@@ -12,6 +12,8 @@
 		E92D39F127A7A2AA00AFDDCC /* WarningToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D39F027A7A2AA00AFDDCC /* WarningToast.swift */; };
 		E92D39FE27A7A79600AFDDCC /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D39FD27A7A79600AFDDCC /* PostDetailsView.swift */; };
 		E94D1DEE27AA84CE00EA7CA6 /* SpinLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94D1DED27AA84CE00EA7CA6 /* SpinLoaderView.swift */; };
+		E975673227B8C412002E3FF6 /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975673127B8C412002E3FF6 /* CartItemView.swift */; };
+		E975673727B8CECF002E3FF6 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975673627B8CECF002E3FF6 /* CartViewModel.swift */; };
 		E9B5B33427A6871A00C2B3D5 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5B33327A6871A00C2B3D5 /* CommentView.swift */; };
 		E9B5B33927A6873000C2B3D5 /* PostUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5B33827A6873000C2B3D5 /* PostUserView.swift */; };
 		E9B5B33E27A68A3300C2B3D5 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5B33D27A68A3300C2B3D5 /* CommentViewModel.swift */; };
@@ -59,6 +61,8 @@
 		E92D39F027A7A2AA00AFDDCC /* WarningToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningToast.swift; sourceTree = "<group>"; };
 		E92D39FD27A7A79600AFDDCC /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 		E94D1DED27AA84CE00EA7CA6 /* SpinLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinLoaderView.swift; sourceTree = "<group>"; };
+		E975673127B8C412002E3FF6 /* CartItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
+		E975673627B8CECF002E3FF6 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		E9B5B33327A6871A00C2B3D5 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		E9B5B33827A6873000C2B3D5 /* PostUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUserView.swift; sourceTree = "<group>"; };
 		E9B5B33D27A68A3300C2B3D5 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E975673027B8C3B8002E3FF6 /* cart */ = {
+			isa = PBXGroup;
+			children = (
+				E975673127B8C412002E3FF6 /* CartItemView.swift */,
+				E975673627B8CECF002E3FF6 /* CartViewModel.swift */,
+			);
+			path = cart;
+			sourceTree = "<group>";
+		};
 		E9D0AE7527A265E400C4CAAA = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 		E9D0AE8027A265E400C4CAAA /* OnlineShoppingApp-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				E975673027B8C3B8002E3FF6 /* cart */,
 				E9D0AEEC27A2BFAB00C4CAAA /* network */,
 				E9D0AED727A2892D00C4CAAA /* utility */,
 				E9D0AECB27A2742B00C4CAAA /* main */,
@@ -387,12 +401,14 @@
 				E94D1DEE27AA84CE00EA7CA6 /* SpinLoaderView.swift in Sources */,
 				E92D39EC27A7A25200AFDDCC /* SuccessToast.swift in Sources */,
 				E9C28DE927B5499600DBE08E /* ChartViewModel.swift in Sources */,
+				E975673227B8C412002E3FF6 /* CartItemView.swift in Sources */,
 				E92D39FE27A7A79600AFDDCC /* PostDetailsView.swift in Sources */,
 				E9D0AEF827A2C1A300C4CAAA /* DashBoardModel.swift in Sources */,
 				E9D0AED927A2896900C4CAAA /* ColorList.swift in Sources */,
 				E9D0AE8427A265E400C4CAAA /* DashBoardView.swift in Sources */,
 				E9D0AEFD27A2C7DD00C4CAAA /* UserDetailsListRow.swift in Sources */,
 				E9D0AEE727A2B97800C4CAAA /* CheckBoxRow.swift in Sources */,
+				E975673727B8CECF002E3FF6 /* CartViewModel.swift in Sources */,
 				E92D39E727A7A00500AFDDCC /* ErrorToast.swift in Sources */,
 				E9D0AEBA27A272E200C4CAAA /* ContactView.swift in Sources */,
 				E9D0AEF327A2C05C00C4CAAA /* DashBoardViewModel.swift in Sources */,

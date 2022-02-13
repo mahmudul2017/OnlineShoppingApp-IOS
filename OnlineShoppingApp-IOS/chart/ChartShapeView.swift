@@ -99,7 +99,7 @@ struct ChartShapeView: View {
     }
 }
 
-struct CartItemView_Previews: PreviewProvider {
+struct ChartShapeView_Previews: PreviewProvider {
     static var previews: some View {
         ChartShapeView()
     }

@@ -2,8 +2,8 @@
   "colors" : [
     {
       "color" : {
-        "platform" : "ios",
-        "reference" : "systemGrayColor"
+        "platform" : "osx",
+        "reference" : "selectedTextBackgroundColor"
       },
       "idiom" : "universal"
     },
