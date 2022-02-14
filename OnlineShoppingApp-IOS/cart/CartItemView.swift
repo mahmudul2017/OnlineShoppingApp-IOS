@@ -74,7 +74,7 @@ struct CartItemView: View {
                         
                         Section(header: HStack {
                             Text("Holder Information")
-                                .font(.system(size: 18))
+                                .font(.system(size: 14))
                                 .bold()
                                 .foregroundColor(.green)
                         }) {

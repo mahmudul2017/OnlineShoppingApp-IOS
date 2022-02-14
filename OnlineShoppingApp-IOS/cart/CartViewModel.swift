@@ -10,6 +10,10 @@ import Combine
 import SwiftUI
 
 class CartViewModel: ObservableObject {
+    init() {
+        print("cartViewModel called....")
+    }
+    
     var didChange = PassthroughSubject<Void, Never>()
     static let types = ["Bookstores", "Pharmacies", "Giftshops", "Candyshops"]
     @Published var type = 0 { didSet { update() } }
