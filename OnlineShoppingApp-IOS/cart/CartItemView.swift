@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CartItemView: View {
     @ObservedObject var viewModel = CartViewModel()
+    @ObservedObject var locationVm = LocationManager()
     @State private var isPlaceOrder: Bool = false
     
     init() {
